@@ -15,7 +15,7 @@ const autoCompleteConfig = {
     const response = await axios.get("https://www.omdbapi.com/", {
       params: {
         apikey: "e8ab75bf",
-        s: searchString,
+        s: searchString.trim(),
       },
     });
     if (response.data.Error) {
